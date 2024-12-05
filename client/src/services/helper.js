@@ -1,1 +1,1 @@
-export const BASE_URL = "https://node-crud-wie1.onrender.com:6010";
+export const BASE_URL = "https://node-crud-ui1a.onrender.com:6010";
