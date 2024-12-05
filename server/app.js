@@ -6,9 +6,14 @@ const cors = require("cors");
 const router = require("./Routes/router");
 const PORT = 6010;
 
-app.get("/", (req, res) => {
-  res.status(201).json("Server Started");
-});
+router.get('/health', (req, res) => {
+  const data = {
+    uptime: process.uptime(),
+    message: 'Ok',
+    date: new Date()
+  }
+  res.status(200).send(data);
+  });
 
 app.use(cors());
 app.use(express.json());
